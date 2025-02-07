@@ -13,6 +13,5 @@ export default function App() {
 }
 
 const GlobalWrapper = styled.main`
-  padding: 24px;
-  background-color: #efefee;
+  background-color: #f7f1e3;
 `;

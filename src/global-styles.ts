@@ -6,10 +6,11 @@ const globalStyles = css`
   }
 
   body {
-    color: #333;
-    background-color: #553333;
-    padding: 24px;
+    color: #031926;
+    background-color: #031926;
+    padding: 2rem 4rem;
     margin: 0;
+    font-size: 1.1rem;
   }
 `;
 
