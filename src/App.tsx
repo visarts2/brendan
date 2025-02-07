@@ -1,14 +1,18 @@
 import { Global } from "@emotion/react";
 import Main from "./app/index";
 import globalStyles from "./global-styles";
+import styled from "@emotion/styled";
 
-function App() {
+export default function App() {
   return (
-    <>
+    <GlobalWrapper>
       <Global styles={globalStyles} />
       <Main />
-    </>
+    </GlobalWrapper>
   );
 }
 
-export default App;
+const GlobalWrapper = styled.main`
+  padding: 24px;
+  background-color: #efefee;
+`;
