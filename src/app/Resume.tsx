@@ -1,3 +1,6 @@
+import { breakpoints, measures } from "../tokens";
+
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export default function Resume() {
@@ -7,19 +10,22 @@ export default function Resume() {
         <HeaderContainer>
           <HeaderInfo>
             <h1>Brendan J Best</h1>
-            <span>
-              <a href="https://www.linkedin.com/in/brendan-best">
-                Find me on LinkedIn
+            <span style={{ marginTop: measures.small }}>
+              <a
+                href="https://www.linkedin.com/in/brendan-best"
+                target="_blank"
+              >
+                find me on LinkedIn <i className="fa-brands fa-linkedin"></i>
               </a>
             </span>
           </HeaderInfo>
-          <HeaderInfo>
+          {/* <HeaderInfo>
             <span>(651) 302-2969</span>
             <span>Remote / Greenville, WI </span>
             <span>
               <a href="mailto:visarts@gmail.com">visarts@gmail.com</a>
             </span>
-          </HeaderInfo>
+          </HeaderInfo>*/}
         </HeaderContainer>
       </Header>
       <Content>
@@ -360,15 +366,22 @@ const ResumeExpHeader = ({
 const Container = styled.div``;
 
 const Header = styled.header`
-  margin-bottom: 2rem;
-  padding: 2rem;
+  margin-bottom: ${measures.medium};
+  padding: ${measures.medium};
   background-color: #468189;
   color: white;
 
   border-bottom: 2rem solid #9dbebb;
   a {
     color: #edf5b0;
+    font-size: 0.85rem;
+    text-decoration: none;
   }
+
+  ${breakpoints.mobile(css`
+    padding: ${measures.small};
+    margin-bottom: ${measures.small};
+  `)}
 `;
 
 const HeaderContainer = styled.div`
@@ -379,8 +392,15 @@ const HeaderContainer = styled.div`
 `;
 
 const HeaderInfo = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  ${breakpoints.mobile(css`
+    flex-direction: column;
+    align-items: flex-start;
+  `)};
 `;
 
 const Content = styled.div`
@@ -391,6 +411,10 @@ const Section = styled.section`
   margin-bottom: 3rem;
   margin: 0 auto;
   max-width: 800px;
+
+  ${breakpoints.mobile(css`
+    padding: 0 ${measures.small};
+  `)}
 `;
 
 const SectionHeader = styled.div`
@@ -413,7 +437,7 @@ const SectionContent = styled.div`
 const SectionItem = styled.div`
   margin: 2rem 0;
   background-color: mintcream;
-  padding: 2rem;
+  padding: ${measures.medium};
   color: rgba(20, 20, 20, 0.75);
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
   border: 1px solid white;
@@ -421,6 +445,10 @@ const SectionItem = styled.div`
   :hover {
     color: rgba(20, 20, 20, 1);
   }
+
+  ${breakpoints.mobile(css`
+    padding: ${measures.small};
+  `)}
 `;
 
 const SectionItemHeader = styled.div`

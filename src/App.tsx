@@ -13,5 +13,5 @@ export default function App() {
 }
 
 const GlobalWrapper = styled.main`
-  background-color: #f7f1e3;
+  background-color: #f7fcea;
 `;
