@@ -1,4 +1,4 @@
-import Resume from "./resume";
+import Resume from "./Resume";
 import styled from "@emotion/styled";
 
 export default function Main() {
